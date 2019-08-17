@@ -30,13 +30,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+A. .forEach will call a callback function on every item in the array but won’t return anything. .map will also call a function on every item in the array but returns a new array of the same size.
+
 2. What is the difference between a function and a method?
+
+A. A function is a piece of code that is called by name (e.g. someFunction()). It can be passed data to operate on (i.e. the parameters) and can optionally return data (the return value). A method is a piece of code that is called by a name that is associated with an object (e.g. someObject.someFunction()).
 
 3. What is closure?
 
+A. A closure is the combination of a function enclosed with references to its surrounding state (the lexical environment). A closure gives you access to an outer function’s scope from an inner function.
+
 4. Describe the four rules of the 'this' keyword.
 
+A. 1. Window/Global Object Binding - This is the default binding of `this`. In this setting, this would refer to the window in a browser or global/console in node.
+   2. Implicit Binding - The object preceding the dot notation is what `this` will be bound to.
+   3. Explicit Binding - Forces a function call to use a particular object for `this` binding. This is done by using functions such as call, apply, and bind. Call and apply both pass the object as an argument in slightly different ways. Apply passes the object in and any arguments in as an array. Bind creates a copy of the function as a new function and sets `this` to the object passed in as an argument.
+   4. New Binding - This binding occurs when calling the function with the `new` operator. This creates a new empty object that inherits the prototype of the function. Properties and methods are added to the object referenced by `this` and the newly created object referenced by `this` is returned implicitly unless another object is returned explicitly.
+
 5. Why do we need super() in an extended class?
+
+A. The super keyword is used to call the object’s parent constructor to extend the parent class to the child class.
 
 ## Project Set up
 
@@ -65,11 +78,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
